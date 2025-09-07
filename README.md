@@ -79,5 +79,39 @@ curl -X DELETE http://127.0.0.1:8000/tasks/1
   ]
 }
 
+## 📸 Screenshots
+
+Here’s a visual walkthrough of the Task Manager API in action:
+
+### 🧭 Swagger UI — Interactive API Explorer  
+FastAPI’s built-in Swagger interface lets you test endpoints, view schemas, and explore your API live.
+
+![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
+
+### 📘 ReDoc — Clean API Documentation  
+ReDoc provides a structured view of your OpenAPI schema, including models, parameters, and responses.
+
+![ReDoc](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/redoc.png?raw=true)
+
+### 📥 GET /tasks — Retrieve All Tasks  
+Returns a list of tasks with timestamps and completion status.
+
+![GET /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/get_tasks.png?raw=true)
+
+### 🆕 POST /tasks — Create a New Task  
+Accepts a JSON payload to create a task with validation.
+
+![POST /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/post_task.png?raw=true)
+
+### ✏️ PATCH /tasks — Update a Task  
+Modifies task fields like title or completion status.
+
+![PATCH /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/update_task.png?raw=true)
+
+### 🗑️ DELETE /tasks — Remove a Task  
+Deletes a task by ID with confirmation response.
+
+![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
+
 
 
