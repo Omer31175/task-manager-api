@@ -92,7 +92,8 @@ Copy code
 }
 📸 Screenshots
 
-![Swagger UI](![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
+![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
+
 
 ![ReDoc](./screenshots/redoc.png)
 ![GET /tasks](./screenshots/get_tasks.png)
