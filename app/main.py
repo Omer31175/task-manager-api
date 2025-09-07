@@ -30,7 +30,6 @@ class Task(BaseModel):
             }
         }
 
-
 class TaskCreate(BaseModel):
     title: str
     completed: bool = False
@@ -49,7 +48,6 @@ class TaskCreate(BaseModel):
             }
         }
 
-
 class TaskUpdate(BaseModel):
     title: Optional[str] = None
     completed: Optional[bool] = None
@@ -67,7 +65,6 @@ class TaskUpdate(BaseModel):
                 "completed": True
             }
         }
-
 
 class MessageResponse(BaseModel):
     message: str
@@ -114,16 +111,14 @@ app = FastAPI(
 # ---------------------------------------------------
 # Endpoints
 # ---------------------------------------------------
-
 @app.get("/tasks", response_model=List[Task], tags=["Tasks"])
 def list_tasks(completed: Optional[bool] = Query(None, description="Filter tasks by completion status")):
     """
     Get all tasks.  
-    Optionally filter by `completed=true` or `completed=false`.
+    Optionally filter by completed=true or completed=false.
     """
     filtered = tasks if completed is None else [t for t in tasks if t["completed"] == completed]
     return [Task(**t) for t in filtered]
-
 
 @app.post("/tasks", response_model=Task, status_code=status.HTTP_201_CREATED, tags=["Tasks"])
 def create_task(task_data: TaskCreate):
@@ -149,7 +144,6 @@ def create_task(task_data: TaskCreate):
     )
     tasks.append(new_task.model_dump())
     return new_task
-
 
 @app.patch("/tasks/{task_id}", response_model=Task, tags=["Tasks"])
 def update_task(task_id: int, updated_data: TaskUpdate):
@@ -180,7 +174,6 @@ def update_task(task_id: int, updated_data: TaskUpdate):
         status_code=status.HTTP_404_NOT_FOUND,
         detail="Task not found"
     )
-
 
 @app.delete("/tasks/{task_id}", response_model=MessageResponse, tags=["Tasks"])
 def delete_task(task_id: int):
