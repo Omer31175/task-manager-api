@@ -92,14 +92,13 @@ Copy code
 }
 📸 Screenshots
 
-![Swagger UI](./screenshots/swagger.png)
+![Swagger UI](![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
+)
 ![ReDoc](./screenshots/redoc.png)
 ![GET /tasks](./screenshots/get_tasks.png)
 ![POST /tasks](./screenshots/post_task.png)
 ![PATCH /tasks](./screenshots/update_task.png)
 ![DELETE /tasks](./screenshots/delete_task.png)
-![Test](./screenshots/test.png)
-
 
 
 🙌 Credits
