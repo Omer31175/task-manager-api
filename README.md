@@ -1,109 +1,27 @@
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)  
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)  
-![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)  
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+# 🧠 Task Manager API
 
-# 🧠 Portfolio Task Manager API
+## 📸 Screenshots
 
-A clean, production-ready FastAPI project built to showcase backend development skills, including RESTful design, data validation, timestamps, and modular architecture.
+### Swagger UI  
+![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
 
-📦 Note: Currently implemented in a single file (`main.py`) for simplicity. Easily modularized into `models.py`, `routes.py`, etc. — future-ready for scaling.
+### ReDoc  
+![ReDoc](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/redoc.png?raw=true)
 
-## 🚀 Features
-- Create, read, update, delete tasks
-- UTC timestamps for tracking changes
-- Filter tasks by completion status
-- Validation to prevent empty or duplicate titles
-- CORS-ready for frontend integration
-- Auto-generated Swagger documentation
+### GET /tasks  
+![GET /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/get_tasks.png?raw=true)
 
-## 📁 Project Structure
-TaskManagerAPI/
-├── app/
-│ └── main.py # FastAPI app with all logic
-├── venv/ # Virtual environment
-├── README.md # This documentation
-├── requirements.txt # Project dependencies
-└── screenshots/ # Screenshots for README
+### POST /tasks  
+![POST /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/post_task.png?raw=true)
 
-bash
-Copy code
+### PATCH /tasks  
+![PATCH /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/update_task.png?raw=true)
 
-## 📦 Installation
-```bash
-git clone https://github.com/yourusername/task-manager-api
-cd TaskManagerAPI
+### DELETE /tasks  
+![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate        # On Linux/Mac
-venv\Scripts\activate           # On Windows
+---
 
-# Install dependencies
-pip install -r requirements.txt
-▶️ Run the API
-bash
-Copy code
-uvicorn app.main:app --reload
-Now visit:
+## 🙌 Credits
 
-Swagger UI → http://127.0.0.1:8000/docs
-
-ReDoc → http://127.0.0.1:8000/redoc
-
-📮 API Endpoints
-Method	Endpoint	Description
-GET	/tasks	List all tasks or filter by completed
-POST	/tasks	Create a new task
-PATCH	/tasks/{id}	Update an existing task
-DELETE	/tasks/{id}	Delete a task
-
-📊 Example Requests
-Create a Task
-bash
-Copy code
-curl -X POST http://127.0.0.1:8000/tasks \
-  -H "Content-Type: application/json" \
-  -d '{"title": "Build portfolio", "completed": false}'
-Update a Task
-bash
-Copy code
-curl -X PATCH http://127.0.0.1:8000/tasks/1 \
-  -H "Content-Type: application/json" \
-  -d '{"completed": true}'
-Delete a Task
-bash
-Copy code
-curl -X DELETE http://127.0.0.1:8000/tasks/1
-⚠️ Example Validation Error
-If you try to create a task with an empty title:
-
-json
-Copy code
-{
-  "detail": [
-    {
-      "type": "value_error",
-      "loc": ["body", "title"],
-      "msg": "Title must not be empty"
-    }
-  ]
-}
-📸 Screenshots
-
-### Swagger UI
-![Swagger UI](https://github.com/omer31175/task-manager-api/blob/mainscreenshots/swagger.png?raw=true)
-### Redoc
-![Redoc](https://github.com/omer31175/task-manager-api/blob/mainscreenshots/redoc.png?raw=true)
-### Get /task
-![Get /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/get_task.png?raw=true)
-### Post /task
-![Post /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/post_task.png?raw=true)
-### Patch /task
-![Patch /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/update_task.png?raw=true)
-### Delete /task
-![Delete /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/delete_task.png?raw=true)
-
-🙌 Credits
-Built by Noushad — backend developer focused on automation, FastAPI, and clean architecture.
+Built by **Noushad** — backend developer focused on automation, FastAPI, and clean architecture.
