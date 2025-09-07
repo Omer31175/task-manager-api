@@ -39,6 +39,46 @@ Swagger UI → http://127.0.0.1:8000/docs
 
 ReDoc → http://127.0.0.1:8000/redoc
 
+📮 API Endpoints
+Here’s a clean table that shows what your API offers:
+## 📮 API Endpoints
+
+| Method | Endpoint         | Description                     |
+|--------|------------------|---------------------------------|
+| GET    | /tasks           | List all tasks or filter by status |
+| POST   | /tasks           | Create a new task               |
+| PATCH  | /tasks/{id}      | Update an existing task         |
+| DELETE | /tasks/{id}      | Delete a task by ID             |
+
+📊 Example Requests
+Let’s show off how your API works with real curl commands:
+## 📊 Example Requests
+
+### ✅ Create a Task
+
+```bash
+curl -X POST http://127.0.0.1:8000/tasks \
+  -H "Content-Type: application/json" \
+  -d '{"title": "Build portfolio", "completed": false}'
+
+✏️ Update a Task
+curl -X PATCH http://127.0.0.1:8000/tasks/1 \
+  -H "Content-Type: application/json" \
+  -d '{"completed": true}'
+
+🗑️ Delete a Task
+curl -X DELETE http://127.0.0.1:8000/tasks/1
+
+⚠️ Example Validation Error
+{
+  "detail": [
+    {
+      "type": "value_error",
+      "loc": ["body", "title"],
+      "msg": "Title must not be empty"
+    }
+  ]
+}
 
 
 
