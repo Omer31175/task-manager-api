@@ -100,6 +100,5 @@ Copy code
 ![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
 
 
-
 🙌 Credits
 Built by Noushad — backend developer focused on automation, FastAPI, and clean architecture.
