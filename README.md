@@ -92,13 +92,18 @@ Copy code
 }
 📸 Screenshots
 
-![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
-![ReDoc](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/redoc.png?raw=true)
-![GET /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/get_tasks.png?raw=true)
-![POST /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/post_task.png?raw=true)
-![PATCH /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/update_task.png?raw=true)
-![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
-
+### Swagger UI
+![Swagger UI](https://github.com/omer31175/task-manager-api/blob/mainscreenshots/swagger.png?raw=true)
+### Redoc
+![Redoc](https://github.com/omer31175/task-manager-api/blob/mainscreenshots/redoc.png?raw=true)
+### Get /task
+![Get /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/get_task.png?raw=true)
+### Post /task
+![Post /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/post_task.png?raw=true)
+### Patch /task
+![Patch /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/update_task.png?raw=true)
+### Delete /task
+![Delete /task](https://github/omer31175/task-manager-api/blob/mainscreenshots/delete_task.png?raw=true)
 
 🙌 Credits
 Built by Noushad — backend developer focused on automation, FastAPI, and clean architecture.
