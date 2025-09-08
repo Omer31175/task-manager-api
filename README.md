@@ -1,121 +1,132 @@
-# 🧠 Task Manager API  
+# 🧠 Portfolio Task Manager API
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)  
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)  
-![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)  
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
-![License](https://img.shields.io/badge/License-MIT-lightgrey)  
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Demo%20Ready-brightgreen)](https://github.com/Omer31175/task-manager-api)
 
-A clean, production-ready **FastAPI project** built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.  
+A clean and professional task management API built with **FastAPI**, designed to showcase backend skills with validation, timestamps, and interactive documentation. This project is part of a portfolio aimed at recruiters and freelance clients.
 
+---
 
-## 🚀 Features  
+## 🚀 Features
 
-- ✅ Full CRUD operations for task management  
-- 🕒 UTC timestamps for creation and updates  
-- 🔍 Filter tasks by completion status  
-- 🛡️ Input validation to prevent empty or duplicate titles  
-- 🌐 CORS-enabled for frontend integration  
-- 📄 Auto-generated Swagger and ReDoc documentation  
+- ✅ Create, read, update, and delete tasks
+- 🔍 Filter tasks by completion status
+- 🧠 Validation with Pydantic (e.g. non-empty titles)
+- 🕒 Auto-generated timestamps (`created_at`, `updated_at`)
+- 📄 Interactive docs via Swagger and ReDoc
+- 🧪 In-memory storage for demo purposes
 
+---
 
+## 📸 Screenshots
 
-## 📦 Installation  
+### 🔍 `GET /tasks` — Lists all tasks with optional filtering  
+![GET /tasks](screenshots/get_tasks.png)
 
+### 📝 `POST /tasks` — Creates a new task with validation  
+![POST /tasks](screenshots/post_task.png)
 
-# Clone the repository
-git clone https://github.com/Omer31175/task-manager-api
+### ✏️ `PATCH /tasks/{id}` — Updates task title or completion status  
+![PATCH /tasks/{id}](screenshots/update_task.png)
+
+### 🗑️ `DELETE /tasks/{id}` — Deletes a task by ID  
+![DELETE /tasks/{id}](screenshots/delete_task.png)
+
+### 📘 Swagger UI — Interactive API documentation  
+![Swagger UI](screenshots/swagger.png)
+
+### 📗 ReDoc UI — Alternative API documentation view  
+![ReDoc UI](screenshots/redoc.png)
+
+---
+
+## 📦 Installation
+
+# Clone the repo
+git clone https://github.com/Omer31175/task-manager-api.git
 cd task-manager-api
 
-# Create a virtual environment
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate        # On Linux/Mac
-venv\Scripts\activate           # On Windows
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the API
+🧪 Run the API
 uvicorn app.main:app --reload
+Then open your browser at:
 
+Swagger UI → http://localhost:8000/docs
 
-📄 API Docs available at:
+ReDoc UI → http://localhost:8000/redoc
 
-* Swagger UI → [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-* ReDoc → [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+📬 API Endpoints
+GET /tasks
+Returns all tasks
 
+Optional query: completed=true or completed=false
 
-## 📮 API Endpoints
+POST /tasks
+Creates a new task
 
-| Method | Endpoint      | Description                        |
-| ------ | ------------- | ---------------------------------- |
-| GET    | `/tasks`      | List all tasks or filter by status |
-| POST   | `/tasks`      | Create a new task                  |
-| PATCH  | `/tasks/{id}` | Update an existing task            |
-| DELETE | `/tasks/{id}` | Delete a task by ID                |
+Title must be unique and non-empty
 
+PATCH /tasks/{id}
+Updates an existing task (partial updates allowed)
+Title must remain unique
 
-## 📊 Example Requests
+DELETE /tasks/{id}
+Deletes a task by ID
 
-### 🆕 Create a Task
-curl -X POST http://127.0.0.1:8000/tasks \
-  -H "Content-Type: application/json" \
-  -d '{"title": "Build portfolio", "completed": false}'
+📘 Example Payloads
+Create Task
 
-
-### ✏️ Update a Task
-curl -X PATCH http://127.0.0.1:8000/tasks/1 \
-  -H "Content-Type: application/json" \
-  -d '{"completed": true}'
-
-
-### 🗑️ Delete a Task
-curl -X DELETE http://127.0.0.1:8000/tasks/1
-
-
-### ⚠️ Validation Error Example
 {
-  "detail": [
-    {
-      "type": "value_error",
-      "loc": ["body", "title"],
-      "msg": "Title must not be empty"
-    }
-  ]
+  "title": "Complete portfolio project",
+  "completed": false
 }
 
+Update Task
 
-## 📸 Screenshots
+{
+  "title": "Finish FastAPI project",
+  "completed": true
+}
 
-### 🧭 Swagger UI — Interactive API Explorer
+🧠 Tech Stack
+FastAPI – Web framework
 
-![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
+Pydantic – Data validation
 
-### 📘 ReDoc — Clean API Documentation
+Uvicorn – ASGI server
 
-![ReDoc](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/redoc.png?raw=true)
+Python 3.11+
 
-### 📥 GET /tasks — Retrieve All Tasks
+🛠️ Project Structure
 
-![GET /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/get_tasks.png?raw=true)
+task-manager-api/
+├── app/
+│   └── main.py
+├── screenshots/
+│   ├── get_tasks.png
+│   ├── post_task.png
+│   ├── update_task.png
+│   ├── delete_task.png
+│   ├── swagger.png
+│   └── redoc.png
+├── requirements.txt
+└── README.md
 
-### 🆕 POST /tasks — Create a New Task
+💼 Portfolio Purpose
+This project is part of a backend portfolio designed to demonstrate:
 
-![POST /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/post_task.png?raw=true)
+Clean API design
 
-### ✏️ PATCH /tasks — Update a Task
+Validation and error handling
 
-![PATCH /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/update_task.png?raw=true)
+Visual documentation polish
 
-### 🗑️ DELETE /tasks — Remove a Task
-
-![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
-
-
-## 🙌 Credits
-Built by **Noushad** — backend developer focused on automation, FastAPI, and clean architecture.
-
-
-
-
-
+Recruiter-friendly presentation
