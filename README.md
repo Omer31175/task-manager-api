@@ -1,16 +1,16 @@
-# 🧠 Task Manager API
+# 🧠 Task Manager API  
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)  
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)  
 ![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)  
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)  
 
-A clean, production-ready **FastAPI** project built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.
+A clean, production-ready **FastAPI project** built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.  
 
 ---
 
-## 🚀 Features
+## 🚀 Features  
 
 - ✅ Full CRUD operations for task management  
 - 🕒 UTC timestamps for creation and updates  
@@ -21,7 +21,7 @@ A clean, production-ready **FastAPI** project built to showcase backend developm
 
 ---
 
-## 📦 Installation
+## 📦 Installation  
 
 ```bash
 # Clone the repository
@@ -38,18 +38,19 @@ pip install -r requirements.txt
 
 # Run the API
 uvicorn app.main:app --reload
-Now visit:
+
+Now visit the docs:
 
 Swagger UI → http://127.0.0.1:8000/docs
 
 ReDoc → http://127.0.0.1:8000/redoc
 
-📮 API Endpoints
-Method	Endpoint	Description
-GET	/tasks	List all tasks or filter by status
-POST	/tasks	Create a new task
-PATCH	/tasks/{id}	Update an existing task
-DELETE	/tasks/{id}	Delete a task by ID
+| Method | Endpoint      | Description                        |
+| ------ | ------------- | ---------------------------------- |
+| GET    | `/tasks`      | List all tasks or filter by status |
+| POST   | `/tasks`      | Create a new task                  |
+| PATCH  | `/tasks/{id}` | Update an existing task            |
+| DELETE | `/tasks/{id}` | Delete a task by ID                |
 
 📊 Example Requests
 🆕 Create a Task
@@ -80,25 +81,20 @@ Copy code
     }
   ]
 }
-## 📸 Screenshots
+📸 Screenshots
+🧭 Swagger UI — Interactive API Explorer
 
-### 🧭 Swagger UI — Interactive API Explorer
-![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
+📘 ReDoc — Clean API Documentation
 
-### 📘 ReDoc — Clean API Documentation
-![ReDoc](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/redoc.png?raw=true)
+📥 GET /tasks — Retrieve All Tasks
 
-### 📥 GET /tasks — Retrieve All Tasks
-![GET /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/get_tasks.png?raw=true)
+🆕 POST /tasks — Create a New Task
 
-### 🆕 POST /tasks — Create a New Task
-![POST /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/post_task.png?raw=true)
+✏️ PATCH /tasks — Update a Task
 
-### ✏️ PATCH /tasks — Update a Task
-![PATCH /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/update_task.png?raw=true)
+🗑️ DELETE /tasks — Remove a Task
 
-### 🗑️ DELETE /tasks — Remove a Task
-![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
+
 🙌 Credits
 Built by Noushad Omer — backend developer focused on automation, FastAPI, and clean architecture.
 
