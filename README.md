@@ -1,44 +1,27 @@
-# 🧠 Task Manager API
+🧠 Task Manager API
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/) 
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)](https://www.uvicorn.org/)
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen)]()
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)]()
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)
-![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 A clean, production-ready FastAPI project built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.
 
+🚀 Features
+✅ Full CRUD operations for task management
 
+🕒 UTC timestamps for creation and updates
 
-## 📑 Table of Contents
+🔍 Filter tasks by completion status
 
-- [Features](#🚀-features)
-- [Installation](#📦-installation)
-- [API Endpoints & Screenshots](#📮-api-endpoints--screenshots)
-  - [GET /tasks](#🧭-get-tasks-—-list-all-tasks)
-  - [POST /tasks](#🆕-post-tasks-—-create-a-new-task)
-  - [PATCH /tasks/{id}](#✏️-patch-tasksid-—-update-a-task)
-  - [DELETE /tasks/{id}](#🗑️-delete-tasksid-—-remove-a-task)
-  - [Swagger UI](#🧭-swagger-ui-—-interactive-api-explorer)
-  - [ReDoc](#📘-redoc-—-clean-api-documentation)
-- [Validation Error Example](#⚠️-validation-error-example)
-- [Credits](#🙌-credits)
+🛡️ Input validation to prevent empty or duplicate titles
 
+🌐 CORS-enabled for frontend integration
 
+📄 Auto-generated Swagger and ReDoc documentation
 
-## 🚀 Features
-
-- ✅ Full CRUD operations for task management
-- 🕒 UTC timestamps for creation and updates
-- 🔍 Filter tasks by completion status
-- 🛡️ Input validation to prevent empty or duplicate titles
-- 🌐 CORS-enabled for frontend integration
-- 📄 Auto-generated Swagger and ReDoc documentation
-
-
-
-## 📦 Installation
-
+📦 Installation
 
 # Clone the repository
 git clone https://github.com/Omer31175/task-manager-api
@@ -46,9 +29,8 @@ cd task-manager-api
 
 # Create a virtual environment
 python -m venv venv
-# Activate
-venv\Scripts\activate     # Windows
-source venv/bin/activate  # Linux/Mac
+source venv/bin/activate        # On Linux/Mac
+venv\Scripts\activate           # On Windows
 
 # Install dependencies
 pip install -r requirements.txt
@@ -61,69 +43,28 @@ Swagger UI → http://127.0.0.1:8000/docs
 
 ReDoc → http://127.0.0.1:8000/redoc
 
-📮 API Endpoints & Screenshots
-🧭 GET /tasks — List All Tasks
-Retrieve all tasks or filter by completion status.
+📮 API Endpoints
+Method	Endpoint	Description
+GET	/tasks	List all tasks or filter by status
+POST	/tasks	Create a new task
+PATCH	/tasks/{id}	Update an existing task
+DELETE	/tasks/{id}	Delete a task by ID
 
-Example Request:
-
-
-
-curl -X GET http://127.0.0.1:8000/tasks
-Screenshot:
-
-
-🆕 POST /tasks — Create a New Task
-Create a task with validation. Titles must be unique.
-
-Example Request:
-
-
+📊 Example Requests
+🆕 Create a Task
 
 curl -X POST http://127.0.0.1:8000/tasks \
   -H "Content-Type: application/json" \
   -d '{"title": "Build portfolio", "completed": false}'
-Screenshot:
-
-
-✏️ PATCH /tasks/{id} — Update a Task
-Update task fields like title or completion status. Partial updates supported.
-
-Example Request:
-
-
+✏️ PATCH /tasks
 
 curl -X PATCH http://127.0.0.1:8000/tasks/1 \
   -H "Content-Type: application/json" \
   -d '{"completed": true}'
-Screenshot:
-
-
-🗑️ DELETE /tasks/{id} — Remove a Task
-Delete a task by ID.
-
-Example Request:
-
-
+🗑️ DELETE /tasks
 
 curl -X DELETE http://127.0.0.1:8000/tasks/1
-Screenshot:
-
-
-🧭 Swagger UI — Interactive API Explorer
-FastAPI’s built-in Swagger interface lets you test endpoints live.
-
-
-
-📘 ReDoc — Clean API Documentation
-Structured view of OpenAPI schema including models, parameters, and responses.
-
-
-
 ⚠️ Validation Error Example
-If you try to create a task with an empty title:
-
-
 
 {
   "detail": [
@@ -134,6 +75,25 @@ If you try to create a task with an empty title:
     }
   ]
 }
+📸 Screenshots (GitHub URLs)
+🧭 Swagger UI — Interactive API Explorer
+
+
+📘 ReDoc — Clean API Documentation
+
+
+📥 GET /tasks — Retrieve All Tasks
+
+
+🆕 POST /tasks — Create a New Task
+
+
+✏️ PATCH /tasks — Update a Task
+
+
+🗑️ DELETE /tasks — Remove a Task
+
+
 🙌 Credits
 Built by Noushad — backend developer focused on automation, FastAPI, and clean architecture.
 
