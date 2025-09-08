@@ -8,6 +8,8 @@
 
 A clean, production-ready FastAPI project built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.
 
+---
+
 ## 🚀 Features
 
 - ✅ Full CRUD operations for task management
@@ -17,6 +19,8 @@ A clean, production-ready FastAPI project built to showcase backend development 
 - 🌐 CORS-enabled for frontend integration
 - 📄 Auto-generated Swagger and ReDoc documentation
 
+---
+
 ## 📦 Installation
 
 ```bash
@@ -24,50 +28,47 @@ A clean, production-ready FastAPI project built to showcase backend development 
 git clone https://github.com/Omer31175/task-manager-api
 cd task-manager-api
 
-# Create a virtual environment
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate        # On Linux/Mac
-venv\Scripts\activate           # On Windows
+# Linux/Mac
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run the API
 uvicorn app.main:app --reload
+
 Visit the docs:
 
 Swagger UI → http://127.0.0.1:8000/docs
 
 ReDoc → http://127.0.0.1:8000/redoc
 
-📮 API Endpoints
-Method	Endpoint	Description
-GET	/tasks	List all tasks or filter by status
-POST	/tasks	Create a new task
-PATCH	/tasks/{id}	Update an existing task
-DELETE	/tasks/{id}	Delete a task by ID
+| Method | Endpoint    | Description                        |
+| ------ | ----------- | ---------------------------------- |
+| GET    | /tasks      | List all tasks or filter by status |
+| POST   | /tasks      | Create a new task                  |
+| PATCH  | /tasks/{id} | Update an existing task            |
+| DELETE | /tasks/{id} | Delete a task by ID                |
 
 📊 Example Requests
 🆕 Create a Task
-bash
-Copy code
 curl -X POST http://127.0.0.1:8000/tasks \
   -H "Content-Type: application/json" \
   -d '{"title": "Build portfolio", "completed": false}'
-✏️ PATCH /tasks
-bash
-Copy code
+
+✏️ Update a Task
 curl -X PATCH http://127.0.0.1:8000/tasks/1 \
   -H "Content-Type: application/json" \
   -d '{"completed": true}'
-🗑️ DELETE /tasks
-bash
-Copy code
-curl -X DELETE http://127.0.0.1:8000/tasks/1
-⚠️ Validation Error Example
 
-json
-Copy code
+🗑️ Delete a Task
+curl -X DELETE http://127.0.0.1:8000/tasks/1
+
+⚠️ Validation Error Example
 {
   "detail": [
     {
@@ -78,15 +79,30 @@ Copy code
   ]
 }
 
-![Swagger UI](screenshots/swagger.png)
-![ReDoc](screenshots/redoc.png)
-![GET /tasks](screenshots/get_tasks.png)
-![POST /tasks](screenshots/post_task.png)
-![PATCH /tasks](screenshots/update_task.png)
-![DELETE /tasks](screenshots/delete_task.png)
+📸 Screenshots (GitHub URLs)
+🧭 Swagger UI — Interactive API Explorer
+
+
+📘 ReDoc — Clean API Documentation
+
+
+📥 GET /tasks — Retrieve All Tasks
+
+
+🆕 POST /tasks — Create a New Task
+
+
+✏️ PATCH /tasks — Update a Task
+
+
+🗑️ DELETE /tasks — Remove a Task
+
 
 🙌 Credits
 Built by Noushad — backend developer focused on automation, FastAPI, and clean architecture.
+
+
+
 
 
 
