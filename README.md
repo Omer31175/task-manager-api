@@ -53,17 +53,17 @@ DELETE	/tasks/{id}	Delete a task by ID
 📊 Example Requests
 🆕 Create a Task
 
-curl -X POST http://127.0.0.1:8000/tasks \
+curl -X POST 
   -H "Content-Type: application/json" \
   -d '{"title": "Build portfolio", "completed": false}'
 ✏️ PATCH /tasks
 
-curl -X PATCH http://127.0.0.1:8000/tasks/1 \
+curl -X PATCH 
   -H "Content-Type: application/json" \
   -d '{"completed": true}'
 🗑️ DELETE /tasks
 
-curl -X DELETE http://127.0.0.1:8000/tasks/1
+curl -X DELETE 
 ⚠️ Validation Error Example
 
 {
