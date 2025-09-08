@@ -1,7 +1,3 @@
-Md
-
-
-Copy
 # 🧠 Portfolio Task Manager API
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
