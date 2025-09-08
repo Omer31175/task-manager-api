@@ -44,7 +44,7 @@ A clean and professional task management API built with **FastAPI**, designed to
 
 ## 📦 Installation
 
-```bash
+```
 # Clone the repo
 git clone https://github.com/Omer31175/task-manager-api.git
 cd task-manager-api
@@ -55,12 +55,10 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+
 🧪 Run the API
-Bash
-
-
-Copy
 uvicorn app.main:app --reload
+
 Then open your browser at:
 
 Swagger UI → http://localhost:8000/docs
@@ -68,6 +66,7 @@ Swagger UI → http://localhost:8000/docs
 ReDoc UI → http://localhost:8000/redoc
 
 📬 API Endpoints
+
 GET /tasks
 Returns all tasks
 
@@ -87,24 +86,21 @@ DELETE /tasks/{id}
 Deletes a task by ID
 
 📘 Example Payloads
+
 Create Task
-Json
 
-
-Copy
 {
   "title": "Complete portfolio project",
   "completed": false
 }
+
 Update Task
-Json
 
-
-Copy
 {
   "title": "Finish FastAPI project",
   "completed": true
 }
+
 🧠 Tech Stack
 FastAPI – Web framework
 
@@ -115,10 +111,7 @@ Uvicorn – ASGI server
 Python 3.11+
 
 🛠️ Project Structure
-Code
 
-
-Copy
 task-manager-api/
 ├── app/
 │   └── main.py
@@ -131,6 +124,7 @@ task-manager-api/
 │   └── redoc.png
 ├── requirements.txt
 └── README.md
+
 💼 Portfolio Purpose
 This project is part of a backend portfolio designed to demonstrate:
 
