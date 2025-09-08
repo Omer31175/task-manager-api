@@ -56,8 +56,10 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-🧪 Run the API
+
+🧪 # Run the API
 uvicorn app.main:app --reload
+
 
 Then open your browser at:
 
@@ -94,12 +96,14 @@ Create Task
   "completed": false
 }
 
+
 Update Task
 
 {
   "title": "Finish FastAPI project",
   "completed": true
 }
+
 
 🧠 Tech Stack
 FastAPI – Web framework
