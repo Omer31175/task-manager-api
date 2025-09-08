@@ -8,7 +8,23 @@
 
 A clean, production-ready FastAPI project built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.
 
----
+
+
+## 📑 Table of Contents
+
+- [Features](#🚀-features)
+- [Installation](#📦-installation)
+- [API Endpoints & Screenshots](#📮-api-endpoints--screenshots)
+  - [GET /tasks](#🧭-get-tasks-—-list-all-tasks)
+  - [POST /tasks](#🆕-post-tasks-—-create-a-new-task)
+  - [PATCH /tasks/{id}](#✏️-patch-tasksid-—-update-a-task)
+  - [DELETE /tasks/{id}](#🗑️-delete-tasksid-—-remove-a-task)
+  - [Swagger UI](#🧭-swagger-ui-—-interactive-api-explorer)
+  - [ReDoc](#📘-redoc-—-clean-api-documentation)
+- [Validation Error Example](#⚠️-validation-error-example)
+- [Credits](#🙌-credits)
+
+
 
 ## 🚀 Features
 
@@ -19,56 +35,96 @@ A clean, production-ready FastAPI project built to showcase backend development 
 - 🌐 CORS-enabled for frontend integration
 - 📄 Auto-generated Swagger and ReDoc documentation
 
----
+
 
 ## 📦 Installation
 
-```bash
+
 # Clone the repository
 git clone https://github.com/Omer31175/task-manager-api
 cd task-manager-api
 
-# Create virtual environment
+# Create a virtual environment
 python -m venv venv
-# Linux/Mac
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
+# Activate
+venv\Scripts\activate     # Windows
+source venv/bin/activate  # Linux/Mac
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run the API
 uvicorn app.main:app --reload
-
 Visit the docs:
 
 Swagger UI → http://127.0.0.1:8000/docs
 
 ReDoc → http://127.0.0.1:8000/redoc
 
-| Method | Endpoint    | Description                        |
-| ------ | ----------- | ---------------------------------- |
-| GET    | /tasks      | List all tasks or filter by status |
-| POST   | /tasks      | Create a new task                  |
-| PATCH  | /tasks/{id} | Update an existing task            |
-| DELETE | /tasks/{id} | Delete a task by ID                |
+📮 API Endpoints & Screenshots
+🧭 GET /tasks — List All Tasks
+Retrieve all tasks or filter by completion status.
 
-📊 Example Requests
-🆕 Create a Task
+Example Request:
+
+
+
+curl -X GET http://127.0.0.1:8000/tasks
+Screenshot:
+
+
+🆕 POST /tasks — Create a New Task
+Create a task with validation. Titles must be unique.
+
+Example Request:
+
+
+
 curl -X POST http://127.0.0.1:8000/tasks \
   -H "Content-Type: application/json" \
   -d '{"title": "Build portfolio", "completed": false}'
+Screenshot:
 
-✏️ Update a Task
+
+✏️ PATCH /tasks/{id} — Update a Task
+Update task fields like title or completion status. Partial updates supported.
+
+Example Request:
+
+
+
 curl -X PATCH http://127.0.0.1:8000/tasks/1 \
   -H "Content-Type: application/json" \
   -d '{"completed": true}'
+Screenshot:
 
-🗑️ Delete a Task
+
+🗑️ DELETE /tasks/{id} — Remove a Task
+Delete a task by ID.
+
+Example Request:
+
+
+
 curl -X DELETE http://127.0.0.1:8000/tasks/1
+Screenshot:
+
+
+🧭 Swagger UI — Interactive API Explorer
+FastAPI’s built-in Swagger interface lets you test endpoints live.
+
+
+
+📘 ReDoc — Clean API Documentation
+Structured view of OpenAPI schema including models, parameters, and responses.
+
+
 
 ⚠️ Validation Error Example
+If you try to create a task with an empty title:
+
+
+
 {
   "detail": [
     {
@@ -78,26 +134,6 @@ curl -X DELETE http://127.0.0.1:8000/tasks/1
     }
   ]
 }
-
-## 📸 Screenshots (GitHub URLs)
-
-### 🧭 Swagger UI — Interactive API Explorer
-![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
-
-### 📘 ReDoc — Clean API Documentation
-![ReDoc](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/redoc.png?raw=true)
-
-### 📥 GET /tasks — Retrieve All Tasks
-![GET /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/get_tasks.png?raw=true)
-
-### 🆕 POST /tasks — Create a New Task
-![POST /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/post_task.png?raw=true)
-
-### ✏️ PATCH /tasks — Update a Task
-![PATCH /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/update_task.png?raw=true)
-
-### 🗑️ DELETE /tasks — Remove a Task
-![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
-
 🙌 Credits
 Built by Noushad — backend developer focused on automation, FastAPI, and clean architecture.
+
