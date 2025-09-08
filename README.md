@@ -75,23 +75,25 @@ curl -X DELETE http://127.0.0.1:8000/tasks/1
     }
   ]
 }
-📸 Screenshots (GitHub URLs)
-🧭 Swagger UI — Interactive API Explorer
+## 📸 Screenshots
 
+### 🧭 Swagger UI — Interactive API Explorer
+![Swagger UI](https://raw.githubusercontent.com/Omer31175/task-manager-api/main/screenshots/swagger.png)
 
-📘 ReDoc — Clean API Documentation
+### 📘 ReDoc — Clean API Documentation
+![ReDoc](https://raw.githubusercontent.com/Omer31175/task-manager-api/main/screenshots/redoc.png)
 
+### 📥 GET /tasks — Retrieve All Tasks
+![GET /tasks](https://raw.githubusercontent.com/Omer31175/task-manager-api/main/screenshots/get_tasks.png)
 
-📥 GET /tasks — Retrieve All Tasks
+### 🆕 POST /tasks — Create a New Task
+![POST /tasks](https://raw.githubusercontent.com/Omer31175/task-manager-api/main/screenshots/post_task.png)
 
+### ✏️ PATCH /tasks — Update a Task
+![PATCH /tasks](https://raw.githubusercontent.com/Omer31175/task-manager-api/main/screenshots/update_task.png)
 
-🆕 POST /tasks — Create a New Task
-
-
-✏️ PATCH /tasks — Update a Task
-
-
-🗑️ DELETE /tasks — Remove a Task
+### 🗑️ DELETE /tasks — Remove a Task
+![DELETE /tasks](https://raw.githubusercontent.com/Omer31175/task-manager-api/main/screenshots/delete_task.png)
 
 
 🙌 Credits
