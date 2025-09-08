@@ -77,6 +77,14 @@ Copy code
     }
   ]
 }
+
+![Swagger UI](screenshots/swagger.png)
+![ReDoc](screenshots/redoc.png)
+![GET /tasks](screenshots/get_tasks.png)
+![POST /tasks](screenshots/post_task.png)
+![PATCH /tasks](screenshots/update_task.png)
+![DELETE /tasks](screenshots/delete_task.png)
+
 🙌 Credits
 Built by Noushad — backend developer focused on automation, FastAPI, and clean architecture.
 
