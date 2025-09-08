@@ -1,56 +1,57 @@
-# 🧠 Task Manager API  
+# 📝 Task Manager API
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)  
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)  
-![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)  
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
-![License](https://img.shields.io/badge/License-MIT-lightgrey)  
-
-A clean, production-ready **FastAPI project** built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.  
+A simple and modern **Task Manager API** built with **FastAPI** and **SQLite**.  
+This project demonstrates CRUD operations, API documentation, and clean project structure — great for learning and as a portfolio showcase.
 
 ---
 
-## 🚀 Features  
-
-- ✅ Full CRUD operations for task management  
-- 🕒 UTC timestamps for creation and updates  
-- 🔍 Filter tasks by completion status  
-- 🛡️ Input validation to prevent empty or duplicate titles  
-- 🌐 CORS-enabled for frontend integration  
-- 📄 Auto-generated Swagger and ReDoc documentation  
+## 🚀 Features
+- ✅ Create, read, update, and delete tasks  
+- 📂 FastAPI automatic docs (Swagger & ReDoc)  
+- 🗄️ SQLite database (lightweight & file-based)  
+- 🖼️ API documentation screenshots included  
 
 ---
 
-## 📦 Installation  
+## ⚙️ Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/Omer31175/task-manager-api
+# 1️⃣ Clone repository
+git clone https://github.com/Omer31175/task-manager-api.git
 cd task-manager-api
 
-# Create a virtual environment
+# 2️⃣ Create virtual environment
 python -m venv venv
-source venv/bin/activate        # On Linux/Mac
-venv\Scripts\activate           # On Windows
+venv\Scripts\activate   # On Windows
+source venv/bin/activate  # On Mac/Linux
 
-# Install dependencies
+# 3️⃣ Install dependencies
 pip install -r requirements.txt
 
-# Run the API
+# 4️⃣ Run server
 uvicorn app.main:app --reload
+API will be available at:
+👉 http://127.0.0.1:8000/docs (Swagger UI)
+👉 http://127.0.0.1:8000/redoc (ReDoc)
 
-Now visit the docs:
+📸 Screenshots
+🧭 Swagger UI — Interactive API Explorer
 
-Swagger UI → http://127.0.0.1:8000/docs
 
-ReDoc → http://127.0.0.1:8000/redoc
+📘 ReDoc — Clean API Documentation
 
-| Method | Endpoint      | Description                        |
-| ------ | ------------- | ---------------------------------- |
-| GET    | `/tasks`      | List all tasks or filter by status |
-| POST   | `/tasks`      | Create a new task                  |
-| PATCH  | `/tasks/{id}` | Update an existing task            |
-| DELETE | `/tasks/{id}` | Delete a task by ID                |
+
+📥 GET /tasks — Retrieve All Tasks
+
+
+🆕 POST /tasks — Create a New Task
+
+
+✏️ PATCH /tasks — Update a Task
+
+
+🗑️ DELETE /tasks — Remove a Task
+
 
 📊 Example Requests
 🆕 Create a Task
@@ -81,22 +82,17 @@ Copy code
     }
   ]
 }
-📸 Screenshots
-🧭 Swagger UI — Interactive API Explorer
+📌 Tech Stack
+FastAPI — high-performance web framework
 
-📘 ReDoc — Clean API Documentation
+SQLite — lightweight relational database
 
-📥 GET /tasks — Retrieve All Tasks
+Uvicorn — ASGI server for running FastAPI
 
-🆕 POST /tasks — Create a New Task
+📜 License
+This project is licensed under the MIT License.
+Feel free to use and adapt it for your own portfolio or projects 🚀
 
-✏️ PATCH /tasks — Update a Task
-
-🗑️ DELETE /tasks — Remove a Task
-
-
-🙌 Credits
-Built by Noushad Omer — backend developer focused on automation, FastAPI, and clean architecture.
 
 
 
