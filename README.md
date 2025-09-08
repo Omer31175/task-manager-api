@@ -50,20 +50,27 @@ POST	/tasks	Create a new task
 PATCH	/tasks/{id}	Update an existing task
 DELETE	/tasks/{id}	Delete a task by ID
 
-📊 Example Requests
-🆕 Create a Task
+## 📊 Example Requests
 
-curl -X POST 
+### 🆕 Create a Task
+
+## 📊 Example Requests
+
+### 🆕 Create a Task
+```bash
+curl -X POST /tasks \
   -H "Content-Type: application/json" \
   -d '{"title": "Build portfolio", "completed": false}'
-✏️ PATCH /tasks
 
-curl -X PATCH 
+
+✏️ Update a Task
+curl -X PATCH /tasks/1 \
   -H "Content-Type: application/json" \
   -d '{"completed": true}'
-🗑️ DELETE /tasks
 
-curl -X DELETE 
+🗑️ Delete a Task
+curl -X DELETE /tasks/1
+
 ⚠️ Validation Error Example
 
 {
