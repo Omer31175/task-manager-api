@@ -1,12 +1,12 @@
 # 🧠 Task Manager API
 
-[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/) 
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)](https://fastapi.tiangolo.com/) 
-[![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)](https://www.uvicorn.org/) 
-[![Status](https://img.shields.io/badge/Status-Completed-brightgreen)]() 
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)]()
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)  
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)  
+![Uvicorn](https://img.shields.io/badge/Uvicorn-Running-success?logo=uvicorn)  
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-A clean, production-ready **FastAPI project** built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.
+A clean, production-ready **FastAPI** project built to showcase backend development skills — including RESTful design, data validation, timestamps, and modular architecture.
 
 ---
 
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 # Run the API
 uvicorn app.main:app --reload
-Visit the docs:
+Now visit:
 
 Swagger UI → http://127.0.0.1:8000/docs
 
@@ -53,20 +53,24 @@ DELETE	/tasks/{id}	Delete a task by ID
 
 📊 Example Requests
 🆕 Create a Task
-
-curl -X POST /tasks \
+bash
+Copy code
+curl -X POST http://127.0.0.1:8000/tasks \
   -H "Content-Type: application/json" \
   -d '{"title": "Build portfolio", "completed": false}'
 ✏️ Update a Task
-
-curl -X PATCH /tasks/1 \
+bash
+Copy code
+curl -X PATCH http://127.0.0.1:8000/tasks/1 \
   -H "Content-Type: application/json" \
   -d '{"completed": true}'
 🗑️ Delete a Task
-
-curl -X DELETE /tasks/1
+bash
+Copy code
+curl -X DELETE http://127.0.0.1:8000/tasks/1
 ⚠️ Validation Error Example
-
+json
+Copy code
 {
   "detail": [
     {
@@ -76,7 +80,7 @@ curl -X DELETE /tasks/1
     }
   ]
 }
-📸 Screenshots (GitHub URLs)
+📸 Screenshots
 🧭 Swagger UI — Interactive API Explorer
 
 
@@ -93,6 +97,7 @@ curl -X DELETE /tasks/1
 
 
 🗑️ DELETE /tasks — Remove a Task
+
 
 
 🙌 Credits
