@@ -80,27 +80,27 @@ Copy code
     }
   ]
 }
-📸 Screenshots
-🧭 Swagger UI — Interactive API Explorer
+## 📸 Screenshots
 
+### 🧭 Swagger UI — Interactive API Explorer
+![Swagger UI](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/swagger.png?raw=true)
 
-📘 ReDoc — Clean API Documentation
+### 📘 ReDoc — Clean API Documentation
+![ReDoc](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/redoc.png?raw=true)
 
+### 📥 GET /tasks — Retrieve All Tasks
+![GET /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/get_tasks.png?raw=true)
 
-📥 GET /tasks — Retrieve All Tasks
+### 🆕 POST /tasks — Create a New Task
+![POST /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/post_task.png?raw=true)
 
+### ✏️ PATCH /tasks — Update a Task
+![PATCH /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/update_task.png?raw=true)
 
-🆕 POST /tasks — Create a New Task
-
-
-✏️ PATCH /tasks — Update a Task
-
-
-🗑️ DELETE /tasks — Remove a Task
-
-
-
+### 🗑️ DELETE /tasks — Remove a Task
+![DELETE /tasks](https://github.com/Omer31175/task-manager-api/blob/main/screenshots/delete_task.png?raw=true)
 🙌 Credits
 Built by Noushad Omer — backend developer focused on automation, FastAPI, and clean architecture.
+
 
 
